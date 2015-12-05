@@ -1,0 +1,65 @@
+t 665.0 95.0 {come back } n 0 w n {} ne
+t 155.0 340.0 {incident call} w 0 w n {} ne
+t 565.0 335.0 {answer phone} n 0 w n {} ne
+t 430.0 830.0 {report recorded} s 0 w n {} ne
+p 155.0 830.0 {Recording the report} 0 sw
+p 565.0 610.0 Clercks 2 w
+t 880.0 335.0 {crime call} n 0 w n {} ne
+p 880.0 610.0 {On the case} 0 w
+t 800.0 825.0 {join for report} s 0 w n {} ne
+t 1175.0 825.0 {join on crime scene} s 0 w n {} ne
+p 1505.0 825.0 Coroners 1 se
+p 1410.0 610.0 Investigating 0 w
+p 430.0 95.0 Patroling 0 n
+p 155.0 90.0 {Recording phone} 0 nw
+p 1485.0 90.0 Inspectors 1 ne
+p 1310.0 90.0 Vehicules 1 n
+t 880.0 190.0 {go on patrol} n 0 w n {} ne
+t 1210.0 330.0 {go back to office} w 0 w n {} ne
+p 1055.0 95.0 Officers 2 n
+p 155.0 465.0 {On the scene} 0 nw
+t 155.0 605.0 {contact dpt} w 0 w n {} ne
+t 1060.0 330.0 {report done} w 0 w n {} ne
+p 1060.0 610.0 {Writing report} 0 w
+p 1210.0 610.0 {Preparing report} 0 w
+e Vehicules 0.5748671639 66.18912302 {go on patrol} 0.001778193527 179.0111728 1 n
+e Officers 0.5789478034 96.64884893 {go on patrol} 0.08226336559 109.2748827 2 n
+e {On the case} {join on crime scene} 3 n
+e Coroners {join on crime scene} 1 n
+e Inspectors 0.75 182.0 {join on crime scene} 0.0528336726 340.5950675 1 n
+e Clercks {join for report} 1 n
+e {go on patrol} Patroling 3 se
+e Patroling {come back } 3 n
+e {come back } 0.07867482677 174.9428478 Vehicules 0.394648716 97.61659683 1 n
+e {crime call} {On the case} 3 ne
+e Patroling 0.8836412261 130.2996547 {crime call} 0.4368774941 126.8463639 3 n
+e {join for report} 0.2131211193 91.44397192 {Writing report} 0.6068551758 93.23625904 3 n
+e {Writing report} {report done} 3 ne
+e {report done} 0.5540626825 141.0602708 Clercks 0.08314308844 142.7957457 1 n
+e {report done} 0.04138526509 112.7918437 Inspectors 0.5803889242 121.4109756 1 n
+e {report done} Officers 1 n
+e Clercks {answer phone} 1 n
+e {answer phone} 0.454541894 131.3202193 {Recording phone} 0.8686371953 106.1508361 1 n
+e {Recording phone} 0.9112820863 181.4717609 {crime call} 0.4760182784 193.1890266 1 n
+e {crime call} Clercks 1 n
+e {Recording phone} {incident call} 1 n
+e Patroling {incident call} 3 n
+e {report recorded} Clercks 1 n
+e {report recorded} Patroling 3 ne
+e {Recording the report} {report recorded} 4 n
+e {contact dpt} {Recording the report} 4 ne
+e {On the scene} {contact dpt} 3 ne
+e Clercks 0.5644405292 106.6208235 {contact dpt} 0.9896988108 108.2266141 1 n
+e {incident call} {On the scene} 3 ne
+e {incident call} Clercks 1 n
+e {join on crime scene} Investigating 5 n
+e Investigating {go back to office} 5 n
+e {go back to office} Officers 1 n
+e {go back to office} Vehicules 1 n
+e {go back to office} 0.02862457352 279.5084972 Coroners 0.2088514885 375.4796932 1 n
+e {go back to office} {Preparing report} 2 ne
+e {Preparing report} {join for report} 2 ne
+e {come back } Officers 2 n
+h assignment3
+
+
