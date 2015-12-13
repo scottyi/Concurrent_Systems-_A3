@@ -1,0 +1,66 @@
+t 695.0 95.0 {Revenir au bureau s'il n'y a pas d'affaire à gérer} n 0 w n {} ne
+t 595.0 335.0 {Répondre au téléphone} n 0 w n {} ne
+t 460.0 830.0 {Rapport enregistré} s 0 w n {} ne
+p 595.0 610.0 CLERKS 2 w
+t 910.0 335.0 {Crime calls} n 0 w n {} ne
+t 830.0 825.0 {Se rejoindre pour le rapport} s 0 w n {} ne
+p 1535.0 825.0 CORONERS 1 se
+p 460.0 95.0 PATROL 0 n
+p 185.0 90.0 {ENREGISTREMENT DE L'APPEL} 0 nw
+t 910.0 190.0 {Aller en patrouille} n 0 w n {} ne
+t 1240.0 330.0 {Revenir au bureau} w 0 w n {} ne
+p 1085.0 95.0 OFFICERS 2 n
+p 185.0 465.0 {SUR LA SCENE DE L'ACCIDENT} 0 nw
+t 185.0 605.0 {Contacter le département} w 0 w n {} ne
+t 1090.0 330.0 {Rapport fait} w 0 w n {} ne
+p 1340.0 90.0 VEHICLES 1 n
+p 185.0 830.0 {ENREGISTREMENT DU RAPPORT} 0 sw
+p 1090.0 610.0 {ECRITURE DU RAPPORT} 0 w
+t 185.0 340.0 {Incident calls} w 0 w n {} ne
+p 1515.0 90.0 {POLICE INSPECTORS} 1 ne
+p 1270.0 610.0 {PREPARATION DU RAPPORT} 0 w
+p 1490.0 515.0 {INVESTIGATION DE LA SCENE DU CRIME} 0 w
+t 1205.0 825.0 {Se rendre sur la scène du crime} s 0 w n {} ne
+p 910.0 615.0 {EN ROUTE POUR LA SCENE DU CRIME} 0 w
+e {Revenir au bureau} 0.1142002512 91.25 {POLICE INSPECTORS} 0.6339991675 37.53664876 1 n
+e {Revenir au bureau s'il n'y a pas d'affaire à gérer} OFFICERS 2 n
+e {PREPARATION DU RAPPORT} {Se rejoindre pour le rapport} 2 ne
+e {Revenir au bureau} {PREPARATION DU RAPPORT} 2 ne
+e {Revenir au bureau} 0.02862457352 279.5084972 CORONERS 0.2088514885 375.4796932 1 n
+e {Revenir au bureau} VEHICLES 1 n
+e {Revenir au bureau} OFFICERS 1 n
+e {INVESTIGATION DE LA SCENE DU CRIME} {Revenir au bureau} 5 n
+e {Se rendre sur la scène du crime} {INVESTIGATION DE LA SCENE DU CRIME} 5 n
+e {Incident calls} CLERKS 1 n
+e {Incident calls} {SUR LA SCENE DE L'ACCIDENT} 3 ne
+e CLERKS 0.5644405292 106.6208235 {Contacter le département} 0.9896988108 108.2266141 1 n
+e {SUR LA SCENE DE L'ACCIDENT} {Contacter le département} 3 ne
+e {Contacter le département} {ENREGISTREMENT DU RAPPORT} 4 ne
+e {ENREGISTREMENT DU RAPPORT} {Rapport enregistré} 4 n
+e {Rapport enregistré} PATROL 3 ne
+e {Rapport enregistré} CLERKS 1 n
+e PATROL {Incident calls} 3 n
+e {ENREGISTREMENT DE L'APPEL} {Incident calls} 1 n
+e {Crime calls} CLERKS 1 n
+e {ENREGISTREMENT DE L'APPEL} 0.9112820863 181.4717609 {Crime calls} 0.4760182784 193.1890266 1 n
+e {Répondre au téléphone} 0.454541894 131.3202193 {ENREGISTREMENT DE L'APPEL} 0.8686371953 106.1508361 1 n
+e CLERKS {Répondre au téléphone} 1 n
+e {Rapport fait} OFFICERS 1 n
+e {Rapport fait} 0.04138526509 112.7918437 {POLICE INSPECTORS} 0.5803889242 121.4109756 1 n
+e {Rapport fait} 0.5540626825 141.0602708 CLERKS 0.08314308844 142.7957457 1 n
+e {ECRITURE DU RAPPORT} {Rapport fait} 3 ne
+e {Se rejoindre pour le rapport} 0.2131211193 91.44397192 {ECRITURE DU RAPPORT} 0.6068551758 93.23625904 3 n
+e PATROL 0.8836412261 130.2996547 {Crime calls} 0.4368774941 126.8463639 3 n
+e {Crime calls} {EN ROUTE POUR LA SCENE DU CRIME} 3 ne
+e {Revenir au bureau s'il n'y a pas d'affaire à gérer} 0.07867482677 174.9428478 VEHICLES 0.394648716 97.61659683 1 n
+e PATROL {Revenir au bureau s'il n'y a pas d'affaire à gérer} 3 n
+e {Aller en patrouille} PATROL 3 se
+e CLERKS {Se rejoindre pour le rapport} 1 n
+e {POLICE INSPECTORS} 0.75 182.0 {Se rendre sur la scène du crime} 0.0528336726 340.5950675 1 n
+e CORONERS {Se rendre sur la scène du crime} 1 n
+e {EN ROUTE POUR LA SCENE DU CRIME} {Se rendre sur la scène du crime} 3 n
+e OFFICERS 0.5789478034 96.64884893 {Aller en patrouille} 0.08226336559 109.2748827 2 n
+e VEHICLES 0.5748671639 66.18912302 {Aller en patrouille} 0.001778193527 179.0111728 1 n
+h ASSIGNMENT3_DEPARTEMENT_DE_POLICE
+
+
