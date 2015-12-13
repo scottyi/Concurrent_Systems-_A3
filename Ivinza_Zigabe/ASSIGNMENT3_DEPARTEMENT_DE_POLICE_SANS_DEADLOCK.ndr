@@ -22,7 +22,7 @@ p 1270.0 610.0 {PREPARATION DU RAPPORT} 0 w
 p 1490.0 515.0 {INVESTIGATION DE LA SCENE DU CRIME} 0 w
 t 1205.0 825.0 {Se rendre sur la scène du crime} s 0 w n {} ne
 p 910.0 615.0 {EN ROUTE POUR LA SCENE DU CRIME} 0 w
-t 420.0 555.0 {Raccrocher le téléphone} e 0 w n {} ne
+t 360.0 560.0 {Raccrocher le téléphone} e 0 w n {} ne
 e {Raccrocher le téléphone} CLERKS 1 n
 e {Raccrocher le téléphone} CLERKS 1 n
 e {ENREGISTREMENT DE L'APPEL} {Raccrocher le téléphone} 1 n
