@@ -22,7 +22,6 @@ p 1270.0 610.0 {PREPARATION DU RAPPORT} 0 w
 p 1490.0 515.0 {INVESTIGATION DE LA SCENE DU CRIME} 0 w
 t 1205.0 825.0 {Se rendre sur la scène du crime} s 0 w n {} ne
 p 910.0 615.0 {EN ROUTE POUR LA SCENE DU CRIME} 0 w
-e {Revenir au bureau} 0.1142002512 91.25 {POLICE INSPECTORS} 0.6339991675 37.53664876 1 n
 e {Revenir au bureau s'il n'y a pas d'affaire à gérer} OFFICERS 2 n
 e {PREPARATION DU RAPPORT} {Se rejoindre pour le rapport} 2 ne
 e {Revenir au bureau} {PREPARATION DU RAPPORT} 2 ne

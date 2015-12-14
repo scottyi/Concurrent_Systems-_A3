@@ -64,7 +64,6 @@ e {Revenir au bureau} 0.02862457352 279.5084972 CORONERS 0.2088514885 375.479693
 e {Revenir au bureau} {PREPARATION DU RAPPORT} 2 ne
 e {PREPARATION DU RAPPORT} {Se rejoindre pour le rapport} 2 ne
 e {Revenir au bureau s'il n'y a pas d'affaire à gérer} OFFICERS 2 n
-e {Revenir au bureau} 0.1142002512 91.25 {POLICE INSPECTORS} 0.6339991675 37.53664876 1 n
 h ASSIGNMENT3_DEPARTEMENT_DE_POLICE_SANS_DEADLOCK
 
 
