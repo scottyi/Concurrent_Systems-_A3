@@ -1,0 +1,36 @@
+Selt version 3.4.2 -- 11/03/15 -- LAAS/CNRS
+ktz loaded, 22 states, 38 transitions
+0.001s
+
+- output fullproof;
+output mode set
+0.001s
+
+- [] -dead;
+FALSE
+  state 0: CLERKS*2 CORONERS OFFICERS*2 {POLICE INSPECTORS} VEHICLES
+  -{Aller en patrouille}->
+  state 1: CLERKS*2 CORONERS PATROL*3 {POLICE INSPECTORS}
+  -{Répondre au téléphone}->
+  state 2: CLERKS CORONERS {ENREGISTREMENT DE L'APPEL} PATROL*3 {POLICE INSPECTORS}
+  -{Revenir au bureau s'il n'y a pas d'affaire à gérer}->
+  state 3: CLERKS CORONERS {ENREGISTREMENT DE L'APPEL} OFFICERS*2 {POLICE INSPECTORS} VEHICLES
+  -{Répondre au téléphone}->
+  state 4: CORONERS {ENREGISTREMENT DE L'APPEL}*2 OFFICERS*2 {POLICE INSPECTORS} VEHICLES
+  -{Aller en patrouille}->
+  state 5: CORONERS {ENREGISTREMENT DE L'APPEL}*2 PATROL*3 {POLICE INSPECTORS}
+  -{Crime calls}->
+  state 6: CLERKS CORONERS {EN ROUTE POUR LA SCENE DU CRIME}*3 {ENREGISTREMENT DE L'APPEL} {POLICE INSPECTORS}
+  -{Répondre au téléphone}->
+  state 7: CORONERS {EN ROUTE POUR LA SCENE DU CRIME}*3 {ENREGISTREMENT DE L'APPEL}*2 {POLICE INSPECTORS}
+  -{Se rendre sur la scène du crime}->
+  state 8: {ENREGISTREMENT DE L'APPEL}*2 {INVESTIGATION DE LA SCENE DU CRIME}*5
+  -{Revenir au bureau}->
+  state 9: L.dead CORONERS {ENREGISTREMENT DE L'APPEL}*2 OFFICERS {PREPARATION DU RAPPORT}*2 VEHICLES
+  -L.deadlock->
+  state 10: L.dead CORONERS {ENREGISTREMENT DE L'APPEL}*2 OFFICERS {PREPARATION DU RAPPORT}*2 VEHICLES
+  [accepting all]
+0.003s
+
+- 
+

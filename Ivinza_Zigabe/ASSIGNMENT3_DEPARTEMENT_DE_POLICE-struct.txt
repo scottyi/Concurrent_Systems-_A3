@@ -1,0 +1,52 @@
+Struct version 3.4.2 -- 11/03/15 -- LAAS/CNRS
+
+parsed net ASSIGNMENT3_DEPARTEMENT_DE_POLICE_1
+
+13 places, 11 transitions
+
+net ASSIGNMENT3_DEPARTEMENT_DE_POLICE_1
+tr {Aller en patrouille} OFFICERS*2 VEHICLES -> PATROL*3 
+tr {Contacter le département} CLERKS {SUR LA SCENE DE L'ACCIDENT}*3 -> {ENREGISTREMENT DU RAPPORT}*4 
+tr {Crime calls} {ENREGISTREMENT DE L'APPEL} PATROL*3 -> CLERKS {EN ROUTE POUR LA SCENE DU CRIME}*3 
+tr {Incident calls} {ENREGISTREMENT DE L'APPEL} PATROL*3 -> CLERKS {SUR LA SCENE DE L'ACCIDENT}*3 
+tr {Rapport enregistré} {ENREGISTREMENT DU RAPPORT}*4 -> CLERKS PATROL*3 
+tr {Rapport fait} {ECRITURE DU RAPPORT}*3 -> CLERKS OFFICERS {POLICE INSPECTORS} 
+tr {Revenir au bureau} {INVESTIGATION DE LA SCENE DU CRIME}*5 -> CORONERS OFFICERS {PREPARATION DU RAPPORT}*2 VEHICLES 
+tr {Revenir au bureau s'il n'y a pas d'affaire à gérer} PATROL*3 -> OFFICERS*2 VEHICLES 
+tr {Répondre au téléphone} CLERKS -> {ENREGISTREMENT DE L'APPEL} 
+tr {Se rejoindre pour le rapport} CLERKS {PREPARATION DU RAPPORT}*2 -> {ECRITURE DU RAPPORT}*3 
+tr {Se rendre sur la scène du crime} CORONERS {EN ROUTE POUR LA SCENE DU CRIME}*3 {POLICE INSPECTORS} -> {INVESTIGATION DE LA SCENE DU CRIME}*5 
+pl CLERKS (2)
+pl CORONERS (1)
+pl OFFICERS (2)
+pl {POLICE INSPECTORS} (1)
+pl VEHICLES (1)
+
+0.001s
+
+P-SEMI-FLOWS GENERATING SET ------------------------------------- 
+
+invariant
+
+CLERKS*12 {ECRITURE DU RAPPORT}*4 {ENREGISTREMENT DE L'APPEL}*12 {ENREGISTREMENT DU RAPPORT}*3 (24)
+{EN ROUTE POUR LA SCENE DU CRIME}*20 {ENREGISTREMENT DU RAPPORT}*15 {INVESTIGATION DE LA SCENE DU CRIME}*12 PATROL*20 {SUR LA SCENE DE L'ACCIDENT}*20 VEHICLES*60 (60)
+CORONERS*5 {INVESTIGATION DE LA SCENE DU CRIME} (5)
+{ECRITURE DU RAPPORT}*10 {EN ROUTE POUR LA SCENE DU CRIME}*20 {ENREGISTREMENT DU RAPPORT}*15 {INVESTIGATION DE LA SCENE DU CRIME}*12 OFFICERS*30 PATROL*20 {PREPARATION DU RAPPORT}*15 {SUR LA SCENE DE L'ACCIDENT}*20 (60)
+{ECRITURE DU RAPPORT}*10 {INVESTIGATION DE LA SCENE DU CRIME}*6 {POLICE INSPECTORS}*30 {PREPARATION DU RAPPORT}*15 (30)
+
+0.000s
+
+T-SEMI-FLOWS GENERATING SET ------------------------------------- 
+
+consistent
+
+{Aller en patrouille} {Revenir au bureau s'il n'y a pas d'affaire à gérer}
+{Aller en patrouille} {Crime calls} {Rapport fait} {Revenir au bureau} {Répondre au téléphone} {Se rejoindre pour le rapport} {Se rendre sur la scène du crime}
+{Contacter le département} {Incident calls} {Rapport enregistré} {Répondre au téléphone}
+
+0.000s
+
+ANALYSIS COMPLETED  --------------------------------------------- 
+
+
+
